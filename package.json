@@ -2,8 +2,9 @@
   "name": "lifeos-india-android",
   "version": "1.0.0",
   "private": true,
+  "description": "LifeOS India Android App",
   "scripts": {
-    "build": "echo Frontend is already in www",
+    "build": "esbuild www/notifications.js --bundle --outfile=www/notifications.bundle.js --format=iife",
     "android:add": "npx cap add android",
     "android:sync": "npx cap sync android",
     "android:open": "npx cap open android"
@@ -12,9 +13,10 @@
     "@capacitor/core": "^7.4.3",
     "@capacitor/android": "^7.4.3",
     "@capacitor/cli": "^7.4.3",
-    "@capacitor/local-notifications": "^7.0.0"
+    "@capacitor/local-notifications": "^7.0.1"
   },
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "esbuild": "^0.25.10"
   }
 }
