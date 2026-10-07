@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08132e">
+<title>LifeOS India</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,system-ui,sans-serif;
+  background:#eef3f9;
+  color:#101828;
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer;border:0}
+
+.app{
+  max-width:520px;
+  min-height:100vh;
+  margin:auto;
+  background:#f7f9fc;
+  padding-bottom:85px;
+}
+
+/* HEADER */
+.top{
+  background:linear-gradient(145deg,#08132e,#0d2c67);
+  color:#fff;
+  padding:24px 18px 26px;
+  border-radius:0 0 28px 28px;
+}
+.brand{
+  font-size:27px;
+  font-weight:800;
+}
+.brand span{color:#ff9d00}
+.tag{
+  font-size:12px;
+  color:#c8d5f5;
+  margin-top:4px;
+}
+
+.hero{
+  margin-top:20px;
+  background:linear-gradient(120deg,#087df5,#1555df);
+  border-radius:18px;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.hero b{
+  display:block;
+  font-size:17px;
+}
+.hero small{
+  display:block;
+  margin-top:4px;
+  opacity:.85;
+}
+.circle{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#fff;
+  color:#1267e8;
+  font-size:25px;
+}
+
+/* CONTENT */
+.content{padding:16px}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.card{
+  background:#fff;
+  border-radius:17px;
+  padding:16px;
+  box-shadow:0 5px 20px rgba(23,43,77,.07);
+}
+.card:active{transform:scale(.98)}
+
+.icon{
+  width:43px;
+  height:43px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  font-size:22px;
+  background:#eef5ff;
+}
+
+.count{
+  float:right;
+  font-weight:800;
+  background:#e9f3ff;
+  color:#1267e8;
+  border-radius:20px;
+  padding:3px 8px;
+  font-size:12px;
+}
+
+.card h3{
+  margin:12px 0 3px;
+  font-size:15px;
+}
+.muted{
+  color:#7b8799;
+  font-size:12px;
+}
+
+.section{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:22px 2px 10px;
+}
+.section h2{
+  font-size:18px;
+  margin:0;
+}
+.link{
+  color:#1671ed;
+  font-size:13px;
+}
+
+/* REMINDER */
+.rem{
+  background:#fff;
+  border-radius:15px;
+  padding:13px;
+  margin:8px 0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  box-shadow:0 3px 14px rgba(23,43,77,.06);
+}
+.ri{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:#edf5ff;
+  flex-shrink:0;
+}
+.rem b{font-size:14px}
+.rem small{
+  display:block;
+  color:#8b96a8;
+  margin-top:3px;
+}
+.pay{
+  margin-left:auto;
+  background:#1671ed;
+  color:#fff;
+  border-radius:9px;
+  padding:7px 12px;
+  font-size:12px;
+}
+
+/* SCREENS */
+.screen{display:none}
+.screen.active{display:block}
+
+.pagehead{
+  display:flex;
+  align-items:center;
+  padding:18px 16px;
+  background:#fff;
+}
+.pagehead h1{
+  font-size:20px;
+  margin:0;
+}
+.back{
+  background:none;
+  font-size:28px;
+  margin-right:8px;
+}
+.list{padding:16px}
+
+.add{
+  margin-left:auto;
+  background:#116cf1;
+  color:#fff;
+  border-radius:12px;
+  padding:9px 14px;
+}
+
+/* FORM */
+.form{padding:16px}
+.field{margin-bottom:15px}
+.field label{
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #dce3ed;
+  border-radius:12px;
+  background:#fff;
+  outline:none;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:#1671ed;
+}
+.save{
+  width:100%;
+  padding:14px;
+  background:#116cf1;
+  color:#fff;
+ 
